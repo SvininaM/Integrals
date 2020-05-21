@@ -97,8 +97,8 @@ namespace ParallelProcessing
 
         private void _Calculate(int part)
         {
-            int partsSize = (int)(n) / (parts);
-            int ost = ((int)n) - partsSize * parts;
+            int partsSize = (int)(2*n) / (parts);
+            int ost = ((int)(2*n)) - partsSize * parts;
             int st = part * partsSize + ((part < ost) ? part : ost);
             int fn = (part + 1) * partsSize + ((part + 1 < ost) ? part : (ost - 1));
             //decimal sum2 = 0;
